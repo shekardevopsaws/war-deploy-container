@@ -9,7 +9,7 @@ pipeline{
 
     stages{
 
-        stage1('git checkout through webhooks')
+        stage('git checkout through webhooks')
 
             steps{
 
