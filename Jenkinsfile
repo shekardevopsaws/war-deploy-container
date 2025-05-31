@@ -13,7 +13,7 @@ pipeline{
 
             steps{
 
-                git branch: 'dev', credentialsId: 'f79fe6e2-4884-4824-8f86-d9c204551b23', url: 'https://github.com/shekardevopsaws/war-deploy-container.git'
+                git branch: 'main', credentialsId: 'f79fe6e2-4884-4824-8f86-d9c204551b23', url: 'https://github.com/shekardevopsaws/war-deploy-container.git'
             }
 
 
