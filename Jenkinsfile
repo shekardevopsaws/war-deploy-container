@@ -1,9 +1,9 @@
 pipeline {
     agent any
 
-    tools {
-        maven 'maven 3.9.8'
-    }
+    // tools {
+    //     maven 'maven 3.9.8'
+    // }
 
     stages {
         stage('Git Checkout Through Webhooks') {
