@@ -1,9 +1,12 @@
 pipeline {
     agent any
 
-    // tools {
-    //     maven 'maven 3.9.8'
-    // }
+     tools {
+
+         maven 'maven 3.9.8'
+     }
+        
+    
 
     stages {
         stage('Git Checkout Through Webhooks') {
@@ -13,5 +16,14 @@ pipeline {
                     url: 'https://github.com/shekardevopsaws/war-deploy-container.git'
             }
         }
+
+        stage('build through maven'){
+
+            steps{
+
+                sh 'mvn clean package'
+            }
+        }
+        
     }
 }
