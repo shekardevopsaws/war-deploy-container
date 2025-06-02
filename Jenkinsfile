@@ -1,6 +1,8 @@
 pipeline {
     agent any
 
+        
+
      tools {
 
          maven 'maven 3.9.8'
@@ -29,7 +31,16 @@ pipeline {
 
             steps{
 
-                sh "mvn sonar:sonar"
+                
+                withCredentials([string(credentialsId: 'SONAR_TOKEN', variable: 'SONAR_TOKEN')]) {
+                    sh '''
+                        mvn sonar:sonar \
+                          -Dsonar.host.url=http://54.204.83.232:9000 \
+                          -Dsonar.token=$SONAR_TOKEN
+                    '''
+
+
+               }  
             }
         }
         
