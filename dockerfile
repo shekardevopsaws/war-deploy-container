@@ -20,5 +20,5 @@ USER sonar
 WORKDIR /opt/sonarqube
 
 # Optional: Start command (commented if using Docker Compose or manual start)
-# ENTRYPOINT ["/opt/sonarqube/bin/linux-x86-64/sonar.sh", "start"]
+ENTRYPOINT ["/opt/sonarqube/bin/linux-x86-64/sonar.sh", "start"]
 
